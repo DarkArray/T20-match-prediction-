@@ -64,27 +64,23 @@ scoo=tree.score(b_test,y_test)
 print(scoo)
 
 p=[]
+x=[]
+y=[]
+y=y_test.tolist()
 for i in range (0,len(j)):
     if(j[i]==sc[i] and j[i]==ab[i]):
         p.append(j[i])
-    elif(j[i]==sc[i] and j[i]!=ab[i]):
-        p.append(j[i])
-    
-    elif(j[i]==ab[i] and j[i]!=sc[i]):
-        p.append(j[i])
-  
-    elif(ab[i]==sc[i] and ab[i]!=j[i]):
-        p.append(ab[i])
-    else:
-        p.append(j[i])
+        x.append(y[i])
+ 
 arr= np.array(p) 
-arr
+arr1=np.array(x)
 
 from sklearn.metrics import accuracy_score
-scooo=accuracy_score(y_test,arr)
+scooo=accuracy_score(arr1,arr)
+print("prediction of those 8194 entries where the prediction got accuracy of  ")
 print(scooo)
-
-
+print ("prediction of complete data set ")
+print (score2)
 
 
 
